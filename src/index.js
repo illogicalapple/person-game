@@ -22,7 +22,10 @@ var game = {
       this.at = tree.name
     }
     if(this._buttons.length > 0) {
-      this._buttons.forEach(e => { e.removeEventListener(listener); e.remove(); });
+      this._buttons.forEach(e => {
+        e.removeEventListener(listener);
+        e.remove();
+      });
     }
     this._buttons = [];
     for(let name in tree.buttons) {
@@ -38,7 +41,7 @@ var game = {
     $("pre.game").innerHTML = md.render(this._text);
   },
   _text: "[if you see this something has gone horribly wrong]",
-  _buttons: []
+  _buttons: [...$.all("span.buttons button")]
 };
 $.all = e => document.querySelectorAll(e);
 
