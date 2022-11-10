@@ -11,6 +11,7 @@ class Scene {
 const s = (...args) => new Scene(...args);
 
 // hello, you are **contributing**. 
+// scene (s) function:
 // first argument: name (leave as null if the scene isn't referenced, there is a nevermind button in every scene)
 // second argument: text (self-explanatory, but use <br>s for line breaks, *not* "  \n")
 // third argument: children (object: {"investigate rock": s(...), ...}, leave as null if there are no children)
