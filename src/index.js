@@ -3,6 +3,7 @@
 import map from "./map"
 
 const $ = e => document.querySelector(e);
+$.all = e => document.querySelectorAll(e);
 const md = markdownit();
 var game = {
   set text(newText) {
@@ -43,7 +44,6 @@ var game = {
   _text: "[if you see this something has gone horribly wrong]",
   _buttons: [...$.all("span.buttons button")]
 };
-$.all = e => document.querySelectorAll(e);
 
 // dom things
 addEventListener("load", () => {
