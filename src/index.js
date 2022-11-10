@@ -12,6 +12,10 @@ var game = {
   },
   _text = "[if you see this something has gone horribly wrong]"
 };
-$("span.buttons button").addEventListener("click", () => game.text = `**abc**  
+
+// dom things
+addEventListener("load", () => {
+  $("span.buttons button").addEventListener("click", () => game.text = `**abc**  
 lorem ipsum dolor sit amet
-*test*`)
+*test*`);
+});
