@@ -16,7 +16,7 @@ var game = {
   at: "[[root]]",
   render: function(tree) {
     const listener = function listener(event) {
-      this.render(tree.buttons[event.target.dataset.to]);
+      game.render(tree.buttons[event.target.dataset.to]);
     }
     this.text = tree.text;
     if(tree.name) {
