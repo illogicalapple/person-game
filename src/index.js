@@ -24,7 +24,7 @@ var game = {
     }
     if(this._buttons.length > 0) {
       this._buttons.forEach(e => {
-        e.removeEventListener(listener);
+        e.removeEventListener("click", listener);
         e.remove();
       });
     }
@@ -42,7 +42,7 @@ var game = {
     $("pre.game").innerHTML = md.render(this._text);
   },
   _text: "[if you see this something has gone horribly wrong]",
-  _buttons: [...$.all("span.buttons button")]
+  _buttons: []
 };
 
 // dom things
